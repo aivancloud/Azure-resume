@@ -53,8 +53,9 @@ Challenge: Encountered an error - 'Directory permission is needed for the curren
 
 Unable to resolve error as Microsoft EntraID is not available to me which maybe due to the student account.
 
-1.Creating my frontend workflow
 
+1.Creating my frontend workflow
+Found a workaround: It is to deploy using Azure Static web apps which 
 
 
 2.Implement unit testing to test my Azure Functions code as part of the deployment workflow
