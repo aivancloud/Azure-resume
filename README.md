@@ -22,6 +22,8 @@ Invoking Azure Function in order to retrieve vistior counter data
 Functions has this feature called bindings allowing us to connect other resources to my function i.e Azure Cosmos DB bindings to the function
 and viewing counter data via the function
 A simple HTTP trigger function command in the terminal runs the Azure function
+A HTTP triggered Azure Functions with Cosmos DB input and output binding. 
+The Function is triggered, it retrieves the CosmosDB item, add +1 to it, and saves it and returns its value to the caller.
 
 3.Setting up CosmosDB bindings
 Multiple challenges:
@@ -31,10 +33,34 @@ c.Code Error due to outdated attribute properties
 
 CosmosDB bindings worked with code running locally on the browser
 
-4.Deploying to Azure
+## Deploying to Azure
 a.Deploying my local function to Azure
 
 
-b.Deoplying website to Blob Storage
+b.Deploying website to Azure Storage succesfully!
+https://getresumecounterivan.z23.web.core.windows.net
 
 c.Setting up with Azure CDN for HTTPS and custom domain
+Required to map a custom domain to an Azure Storage endpoint
+by creating a canonical name (CNAME) record with your domain provider.
+Challenge:
+I was not able to create a new endpoint with Azure CDN due to being constrained by my student account
+
+## Building a CI/CD Pipeline
+Before that, I had to use brew to install azure cli in VSC and login to Azure.
+I also had to create a new repository actions secret on Github.
+Challenge: Encountered an error - 'Directory permission is needed for the current user to register the application. For how to configure, please refer 'https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal'. Original error: Insufficient privileges to complete the operation'
+
+Unable to resolve error as Microsoft EntraID is not available to me which maybe due to the student account.
+
+1.Creating my frontend workflow
+
+
+
+2.Implement unit testing to test my Azure Functions code as part of the deployment workflow
+
+
+
+3.Creating my backend workflow
+
+
